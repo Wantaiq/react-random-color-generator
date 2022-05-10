@@ -7,7 +7,7 @@ export default function HueForm(props) {
         value={props.chosenHue}
         onChange={(e) => props.handleHueChange(e)}
       />
-      <label htmlFor="luminocsity">Choose a luminosity</label>
+      <label htmlFor="luminosity">Choose a luminosity</label>
       <input
         onChange={(e) => props.handleLumChange(e)}
         id="luminosity"

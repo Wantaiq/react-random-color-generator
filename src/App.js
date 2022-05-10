@@ -1,5 +1,4 @@
 import './App.css';
-import HueForm from './components/HueForm';
 import RandomColorDiv from './components/RandomColorDiv';
 
 function App() {

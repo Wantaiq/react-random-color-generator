@@ -6,9 +6,7 @@ import HueForm from './HueForm';
 export default function RandomColorDiv() {
   const [chosenHue, setChosenHue] = useState('');
   const [chosenLum, setChosenLum] = useState('');
-  const [color, setColor] = useState(
-    randomColor({ luminosity: chosenLum, hue: chosenHue }),
-  );
+  const [color, setColor] = useState(randomColor());
 
   const style = {
     backgroundColor: color,
@@ -19,11 +17,11 @@ export default function RandomColorDiv() {
   }
 
   function handleHueOnChange(event) {
-    setChosenHue(event.target.value);
+    setChosenHue(event.currentTarget.value);
   }
 
   function handleLumOnChange(event) {
-    setChosenLum(event.target.value);
+    setChosenLum(event.currentTarget.value);
   }
 
   console.log(chosenLum);
@@ -31,7 +29,6 @@ export default function RandomColorDiv() {
   return (
     <>
       <div className="random-color" style={style}>
-        <Button handleClick={handleClick} />
         <p className="gen-txt">Generated color: {color}</p>
       </div>
       <HueForm
@@ -40,6 +37,7 @@ export default function RandomColorDiv() {
         lumValue={chosenLum}
         hueValue={chosenHue}
       />
+      <Button handleClick={handleClick} />
     </>
   );
 }

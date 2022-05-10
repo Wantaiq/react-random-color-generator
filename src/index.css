@@ -77,7 +77,6 @@ people that prefer not to see them */
   align-items: center;
 }
 .random-color {
-  background-color: red;
   width: 250px;
   min-height: 100px;
   display: flex;
@@ -86,6 +85,8 @@ people that prefer not to see them */
   align-items: center;
   border-radius: 25px;
   padding: 0.5em;
+  opacity: 1;
+  transition: opacity;
 }
 .gen-btn {
   padding: 0.9em 0;
