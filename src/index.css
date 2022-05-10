@@ -94,7 +94,7 @@ body {
   min-height: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   border-radius: 25px;
   padding: 0.5em;
@@ -104,7 +104,8 @@ body {
   letter-spacing: 1px;
 }
 
-.gen-div {
+.gen-txt {
+  display: block;
   border-radius: 25px;
   background-color: #1c1c1c;
   color: #fff;
