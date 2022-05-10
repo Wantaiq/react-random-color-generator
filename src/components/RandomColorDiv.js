@@ -13,7 +13,12 @@ export default function RandomColorDiv() {
   };
 
   function handleClick() {
-    setColor(randomColor({ luminosity: chosenLum, hue: chosenHue }));
+    setColor(
+      randomColor({
+        luminosity: chosenLum,
+        hue: chosenHue,
+      }),
+    );
   }
 
   function handleHueOnChange(event) {
@@ -25,11 +30,14 @@ export default function RandomColorDiv() {
   }
 
   console.log(chosenLum);
+  console.log(chosenHue);
 
   return (
     <>
       <div className="random-color" style={style}>
-        <p className="gen-txt">Generated color: {color}</p>
+        <div className="gen-div">
+          <p className="gen-txt">Generated color: {color}</p>
+        </div>
       </div>
       <HueForm
         handleHueChange={handleHueOnChange}
