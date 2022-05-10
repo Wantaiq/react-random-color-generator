@@ -106,8 +106,10 @@ body {
 
 .gen-div {
   border-radius: 25px;
-  background-color: #fff;
+  background-color: #1c1c1c;
+  color: #fff;
   padding: 0.3em 2em;
+  font-weight: 700;
 }
 .gen-btn {
   padding: 0.9em 0;
