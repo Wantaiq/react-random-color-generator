@@ -37,7 +37,7 @@ export default function RandomColorDiv() {
   return (
     <>
       <div className="random-color" style={style}>
-        <div className="gen-div">Generated Color: {color}</div>
+        Generated Color: {color}
       </div>
       <HueForm
         handleHueChange={handleHueOnChange}
