@@ -12,7 +12,7 @@ export default function HueForm(props) {
       <div className="lumInput">
         <label htmlFor="luminosity">Luminosity</label>
         <input
-          onChange={(e) => props.handleLumChange(e)}
+          onChange={(e) => props.handleLuminosityChange(e)}
           id="luminosity"
           value={props.chosenLum}
           maxLength="5"

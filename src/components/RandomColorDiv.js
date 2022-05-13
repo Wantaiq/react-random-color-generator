@@ -5,10 +5,10 @@ import HueForm from './HueForm';
 
 export default function RandomColorDiv() {
   const [chosenHue, setChosenHue] = useState('');
-  const [chosenLum, setChosenLum] = useState('');
+  const [chosenLuminosity, setChosenLuminosity] = useState('');
   const [color, setColor] = useState(
     randomColor({
-      luminosity: chosenLum,
+      luminosity: chosenLuminosity,
       hue: chosenHue,
     }),
   );
@@ -20,7 +20,7 @@ export default function RandomColorDiv() {
   function handleClick() {
     setColor(
       randomColor({
-        luminosity: chosenLum,
+        luminosity: chosenLuminosity,
         hue: chosenHue,
       }),
     );
@@ -30,8 +30,8 @@ export default function RandomColorDiv() {
     setChosenHue(event.currentTarget.value);
   }
 
-  function handleLumOnChange(event) {
-    setChosenLum(event.currentTarget.value);
+  function handleLuminosityOnChange(event) {
+    setChosenLuminosity(event.currentTarget.value);
   }
 
   return (
@@ -41,8 +41,8 @@ export default function RandomColorDiv() {
       </div>
       <HueForm
         handleHueChange={handleHueOnChange}
-        handleLumChange={handleLumOnChange}
-        lumValue={chosenLum}
+        handleLuminosityChange={handleLuminosityOnChange}
+        luminosityValue={chosenLuminosity}
         hueValue={chosenHue}
       />
       <Button handleClick={handleClick} />
